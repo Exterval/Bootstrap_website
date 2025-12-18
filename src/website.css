@@ -1,3 +1,19 @@
+
+/* 
+blue
+134686
+
+red
+ed3f27
+
+yellow
+feb21a
+
+cream bg
+FDF4E3 
+*/
+
+
 :root{
     --bg-color: #FDF4E3;
 }
@@ -16,19 +32,6 @@ body{
     background-color: var(--bg-color);
 }
 
-/* 
-blue
-134686
-
-red
-ed3f27
-
-yellow
-feb21a
-
-cream bg
-FDF4E3 
-*/
 
 body {
     background-color: #FDF4E3;
@@ -66,7 +69,7 @@ body {
     max-width: 800px;
     height: auto;
     position: relative;
-    bottom: 100px;
+    bottom: 80px;
 }
 
 .hero-typing {
@@ -77,7 +80,7 @@ body {
     text-align: center;
     padding: 0 1rem;
     margin-top: 0.75rem;
-    transform: translateY(-130px);
+    transform: translateY(-110px);
 }
 
 .typing-caret {
@@ -139,5 +142,72 @@ body {
     background-color: #ece4d5;
     box-shadow: 5px 5px 20px;
     transform: translateY(-10px);
+}
+
+/* Booking style selection */
+.booking-style-picker {
+    max-width: 980px;
+}
+
+.booking-style-option {
+    width: 100%;
+    text-align: center;
+    border: 2px solid var(--bs-gray-400);
+    background: var(--bs-gray-100);
+    color: var(--bs-gray-800);
+    border-radius: 16px;
+    padding: 1.25rem;
+    cursor: pointer;
+    transition: transform 0.12s ease, border-color 0.12s ease, background-color 0.12s ease;
+}
+
+.booking-style-option:hover {
+    transform: translateY(-2px);
+}
+
+.booking-style-option:focus-visible {
+    outline: 3px solid #FEB21A;
+    outline-offset: 2px;
+}
+
+.booking-style-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #134686;
+    margin-bottom: 0.25rem;
+}
+
+.booking-style-icon {
+    font-size: 2.25rem;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    color: var(--bs-gray-600);
+}
+
+.booking-style-desc {
+    color: var(--bs-gray-700);
+}
+
+.booking-style-option.is-selected {
+    background: #ed3f27;
+}
+
+.booking-style-option.is-selected .booking-style-title {
+    color: #ffffff;
+}
+
+
+.booking-style-option.is-selected .booking-style-desc {
+    color: #ffffff;
+}
+
+.booking-style-option.is-selected .booking-style-icon {
+    color: #ffffff;
+}
+
+.btn-book-now:disabled {
+    background-color: var(--bs-gray-500);
+    cursor: not-allowed;
+    opacity: 0.8;
 }
 

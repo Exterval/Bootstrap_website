@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="website.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md" style="background-color: #134686; padding: 5px;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-truck navbar-brand text-white">PQRS</i>
+            </a>
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item p-2"><a href="index.html" class="nav-link" style="color: white;">Home</a></li>
+                    <li class="nav-item p-2"><a href="#" class="nav-link" style="color: white;">About</a></li>
+                    <li class="nav-item p-2"><a href="#" class="nav-link" style="color: white;">Services</a></li>
+                    <li class="nav-item p-2"><a href="#" class="nav-link" style="color: white;">Track</a></li>
+                    <li class="nav-item p-2"><a href="booking.html" class="nav-link" style="color: white;">Book</a></li>
+                </ul>
+            </div>
+            <i class="bi bi-person-fill text-white" style="font-size: 30px;"></i>
+        </div>
+    </nav>
+    <div style="background-color: #ed3f27; height: 7px; box-shadow: 5px 5px 5px;"></div>
+    <div style="background-color: #FEB21A; height: 7px;"></div>
+
+    <main class="container py-5">
+        <h1 class="mb-5 text-center" style="color: #134686;">Choose your Booking Style</h1>
+
+        <section aria-label="Booking style" class="booking-style-picker mx-auto">
+            <div class="row g-3 justify-content-center">
+                <div class="col-12 col-md-4">
+                    <button type="button" class="booking-style-option" data-booking-style="full-day" aria-pressed="false">
+                        <div class="booking-style-icon" aria-hidden="true"><i class="bi bi-calendar2-week"></i></div>
+                        <div class="booking-style-title">Full-day booking</div>
+                        <div class="booking-style-desc">This is a reservation of the truck and driver for an entire workday, giving you exclusive control for multiple stops, complex logistics, or extended loading/unloading times. It offers the most flexibility and control for high-volume or varied tasks.</div>
+                    </button>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <button type="button" class="booking-style-option" data-booking-style="normal" aria-pressed="false">
+                        <div class="booking-style-icon" aria-hidden="true"><i class="bi bi-calendar2-check"></i></div>
+                        <div class="booking-style-title">Normal booking</div>
+                        <div class="booking-style-desc">This is a planned, point-to-point delivery set for a specific date and time slot in advance. It is ideal for routine, straightforward shipments where the priority is reliability and cost-effectiveness over immediate speed.</div>
+                    </button>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <button type="button" class="booking-style-option" data-booking-style="immediate" aria-pressed="false">
+                        <div class="booking-style-icon" aria-hidden="true"><i class="bi bi-lightning-charge"></i></div>
+                        <div class="booking-style-title">Immediate booking</div>
+                        <div class="booking-style-desc">This is an urgent request for a truck to be dispatched right away, aiming for pickup within minutes or the same day. It is the fastest, least-planned, and generally the most expensive option, used for time-critical emergencies or last-minute needs.</div>
+                    </button>
+                </div>
+            </div>
+
+            <div class="d-flex flex-column align-items-center gap-2 mt-4">
+                <div id="booking-style-hint" class="text-muted">Select one booking style.</div>
+                <button id="confirm-booking-style" type="button" class="btn-book-now" disabled>Confirm</button>
+            </div>
+        </section>
+
+        <section id="booking-details" class="mt-5 d-none" aria-label="Booking details">
+            <h2 class="h4 text-center" style="color: #134686;">Booking details</h2>
+            <p class="mb-4 text-center">Selected booking style: <strong id="selected-style-label"></strong></p>
+
+        </section>
+    </main>
+
+<script src="booking.js"></script>
+</body>
+</html>
