@@ -12,6 +12,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body{
+    background-color: var(--bg-color);
+}
+
 /* 
 blue
 134686
@@ -38,6 +42,7 @@ body {
     background-repeat: no-repeat;
     background-position: center, center -330px;
     background-attachment: fixed;
+    max-width: 100%;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -114,6 +119,25 @@ body {
 .btn-book-now:hover {
     background-color: #feb21a;
 }
-body{
-    background-color: var(--bg-color);
+
+#hero-section-two{
+    color: white;
+    background: url('/assets/ServicesBackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    backdrop-filter: contrast(40%);
 }
+
+.service-card{
+    transition: 0.2s ease-in-out;
+    border-radius: 25px;
+}
+
+.service-card:hover{
+    background-color: #ece4d5;
+    box-shadow: 5px 5px 20px;
+    transform: translateY(-10px);
+}
+
