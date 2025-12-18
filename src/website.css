@@ -3,3 +3,110 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* 
+blue
+134686
+
+red
+ed3f27
+
+yellow
+feb21a
+
+cream bg
+FDF4E3 
+*/
+
+body {
+    background-color: #FDF4E3;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-section {
+    background-image: linear-gradient(rgba(19, 70, 134, 0.5), rgba(19, 70, 134, 0.5)), url('/assets/LandingPage2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center, center -330px;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-2 {
+    background-color: #FDF4E3;
+    min-height: 100vh;
+}
+
+.logo2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo2 img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    position: relative;
+    bottom: 100px;
+}
+
+.hero-typing {
+    position: relative;
+    color: #fff;
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    font-weight: 600;
+    text-align: center;
+    padding: 0 1rem;
+    margin-top: 0.75rem;
+    transform: translateY(-430px);
+}
+
+.typing-caret {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background: currentColor;
+    margin-left: 0.15em;
+    vertical-align: -0.12em;
+    animation: caret-blink 0.9s steps(1, end) infinite;
+}
+
+@keyframes caret-blink {
+    0%, 49% {
+        opacity: 1;
+    }
+    50%, 100% {
+        opacity: 0;
+    }
+}
+
+.book-now {
+    margin-top: 1.5rem;
+    transform: translateY(-400px);
+}
+
+.btn-book-now {
+    background-color: #ed3f27;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-book-now:hover {
+    background-color: #feb21a;
+}
