@@ -77,7 +77,7 @@ body {
     text-align: center;
     padding: 0 1rem;
     margin-top: 0.75rem;
-    transform: translateY(-430px);
+    transform: translateY(-130px);
 }
 
 .typing-caret {
@@ -101,7 +101,7 @@ body {
 
 .book-now {
     margin-top: 1.5rem;
-    transform: translateY(-400px);
+    transform: translateY(-100px);
 }
 
 .btn-book-now {
