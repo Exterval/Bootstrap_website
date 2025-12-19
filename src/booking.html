@@ -47,17 +47,21 @@
 
     <main class="container py-5">
         <section id="booking-details" aria-label="Booking details">
-            <h2 class="h4 text-center" style="color: #134686;">Booking details</h2>
-            <p class="mb-4 text-center">Selected booking style: <strong id="selected-style-label"></strong></p>
+            
+            <div class="booking-heading-bg-wrap position-relative mb-4">
+                <div class="booking-heading-bg-img"></div>
+                <h2 class="booking-heading-text">Booking <span class="text-danger">Details</span></h2>
+            </div>
+            <p class="selected-booking">Selected booking style: <strong id="selected-style-label"></strong></p>
 
-            <div class="text-center mb-4">
+            <div class="change-booking">
                 <button id="change-booking-style" type="button" class="btn btn-link fw-semibold">Change booking style</button>
             </div>
 
             <form id="booking-form" class="booking-form mx-auto" novalidate>
                 <div class="booking-details">
                     <div class="row g-3">   
-                        <div class="booking-section-header booking-section-header--danger mt-4">Customer Information</div>
+                        <div class="booking-section-header-yellow">Customer Information</div>
                         <div class="col-12 col-md-6">
                             <label for="firstName" class="form-label fw-semibold">First Name <span class="text-danger">*</span></label>
                             <input id="firstName" name="firstName" type="text" class="form-control" placeholder="John" required>
@@ -78,7 +82,7 @@
                         </div>
                     </div>
 
-                    <div class="booking-section-header booking-section-header--danger mt-4">Pickup and Delivery Details</div>
+                    <div class="booking-section-header-orange">Pickup and Delivery Details</div>
                     <div class="row g-3 mt-0">
                         <div class="col-12 col-md-6">
                             <label for="pickupAddress" class="form-label fw-semibold">Pickup Address <span class="text-danger">*</span></label>
@@ -95,7 +99,7 @@
                         </div>
                     </div>
 
-                    <div class="booking-section-header booking-section-header--primary mt-4">Item Details</div>
+                    <div class="booking-section-header-blue">Item Details</div>
 
                     <div id="item-rows" class="row g-3 mt-0" aria-label="Item list">
                         <div class="col-12" data-item-row>
