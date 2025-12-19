@@ -5,6 +5,32 @@
             const details = document.getElementById('booking-details');
             const selectedLabel = document.getElementById('selected-style-label');
 
+            const changeStyleBtn = document.getElementById('change-booking-style');
+            const bookingStyleModalEl = document.getElementById('booking-style-modal');
+            const bookingStyleModal = (bookingStyleModalEl && window.bootstrap && window.bootstrap.Modal)
+                ? new window.bootstrap.Modal(bookingStyleModalEl, { backdrop: 'static', keyboard: false })
+                : null;
+
+            const BODY_OPEN_CLASS = 'pqrs-booking-style-open';
+            const FALLBACK_BACKDROP_CLASS = 'pqrs-booking-style-fallback-backdrop';
+
+            function setBodyOpen(isOpen) {
+                document.body.classList.toggle(BODY_OPEN_CLASS, isOpen);
+            }
+
+            function ensureFallbackBackdrop() {
+                if (document.querySelector(`.${FALLBACK_BACKDROP_CLASS}`)) return;
+
+                const backdrop = document.createElement('div');
+                backdrop.className = `modal-backdrop fade show ${FALLBACK_BACKDROP_CLASS}`;
+                document.body.appendChild(backdrop);
+            }
+
+            function removeFallbackBackdrop() {
+                const backdrop = document.querySelector(`.${FALLBACK_BACKDROP_CLASS}`);
+                if (backdrop) backdrop.remove();
+            }
+
             const bookingForm = document.getElementById('booking-form');
             const addItemBtn = document.getElementById('add-item');
             const itemRows = document.getElementById('item-rows');
@@ -43,7 +69,51 @@
                     details.classList.remove('d-none');
                     details.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
+
+                if (bookingStyleModal) {
+                    bookingStyleModal.hide();
+                }
+
+                // Fallback if Bootstrap modal isn't available.
+                if (!bookingStyleModal && bookingStyleModalEl) {
+                    bookingStyleModalEl.classList.remove('show');
+                    bookingStyleModalEl.style.display = 'none';
+                    bookingStyleModalEl.setAttribute('aria-hidden', 'true');
+                    removeFallbackBackdrop();
+                    setBodyOpen(false);
+                }
             });
+
+            if (changeStyleBtn && bookingStyleModal) {
+                changeStyleBtn.addEventListener('click', () => bookingStyleModal.show());
+            }
+
+            if (changeStyleBtn && !bookingStyleModal && bookingStyleModalEl) {
+                changeStyleBtn.addEventListener('click', () => {
+                    bookingStyleModalEl.classList.add('show');
+                    bookingStyleModalEl.style.display = 'block';
+                    bookingStyleModalEl.removeAttribute('aria-hidden');
+                    ensureFallbackBackdrop();
+                    setBodyOpen(true);
+                });
+            }
+
+            // Show the booking style chooser as soon as this script runs.
+            if (bookingStyleModal) {
+                window.setTimeout(() => bookingStyleModal.show(), 0);
+            } else if (bookingStyleModalEl) {
+                // Minimal fallback so the user still sees the choices.
+                bookingStyleModalEl.classList.add('show');
+                bookingStyleModalEl.style.display = 'block';
+                bookingStyleModalEl.removeAttribute('aria-hidden');
+                ensureFallbackBackdrop();
+                setBodyOpen(true);
+            }
+
+            if (bookingStyleModalEl && window.bootstrap) {
+                bookingStyleModalEl.addEventListener('show.bs.modal', () => setBodyOpen(true));
+                bookingStyleModalEl.addEventListener('hidden.bs.modal', () => setBodyOpen(false));
+            }
 
             function getItemRowCount() {
                 if (!itemRows) return 0;
