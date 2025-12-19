@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="website.css">
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Login</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md" style="background-color: #134686; padding: 5px;">
+        <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <i class="bi bi-truck navbar-brand text-white">PQRS</i>
+                </a>
+                <button class="navbar-toggler" type="button" 
+                data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                <li class="nav-item p-2">
+                    <a href="index.html" class="nav-link" style="color: white;">Home</a>
+                </li>
+                <li class="nav-item p-2">
+                    <a href="#about" class="nav-link disabled">About</a>
+                </li>
+                <li class="nav-item p-2">
+                    <a href="#services" class="nav-link disabled" >Services</a>
+                </li>
+                <li class="nav-item p-2">
+                    <a href="#" class="nav-link disabled">Track</a>
+                </li>
+                <li class="nav-item p-2">
+                    <a href="#" class="nav-link disabled">Book</a>
+                </li>
+            </ul>
+            </div>
+                    <i class="bi bi-person-fill text-white" style="font-size: 30px;"></i>
+        </div>
+    </nav>
+    <div style="background-color: #ed3f27; height: 7px; box-shadow: 5px 5px 5px;"></div>
+    <div style="background-color: #FEB21A; height: 7px;"></div>
+
+    <section id="login">
+        <div class="container row align-items-center justify-content-around m-auto gap-5 mt-5">
+            <div class="col">
+                <img src="/assets/logo1.png" alt="" class="img-fluid">
+            </div>
+            <div class="col">
+                <div class="bg-gradient p-5 rounded-5 login-section shadow-sm" id="loginForm" style="background-color: #F6F8FF;">
+                    <form class="">
+                        <h1 class="text-center fst-italic" style="color: #134686">Login</h1>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email</label>
+                            <input type="email" class="form-control shadow-sm" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="name@gmail.com">
+                        </div>
+                        <div class="mb-5">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control shadow-sm" id="exampleInputPassword1" placeholder="name12345">
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center my-2">
+                            <button type="submit" class="btn btn-primary p-3 rounded-5 w-50" style="background-color: #FEB21A;">Login</button>
+                        </div>
+                        
+                        <p class="text-muted text-center">Not registered?<a href="register.html" class="text-danger fw-bold mx-1">Register here!</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="login.js"></script>
+</body>
+</html>
