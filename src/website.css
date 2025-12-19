@@ -191,6 +191,18 @@ body {
     background: #ed3f27;
 }
 
+.booking-style-option[data-booking-style="full-day"].is-selected {
+    background: #134686;
+}
+
+.booking-style-option[data-booking-style="normal"].is-selected {
+    background: #ed3f27;
+}
+
+.booking-style-option[data-booking-style="immediate"].is-selected {
+    background: #feb21a;
+}
+
 .booking-style-option.is-selected .booking-style-title {
     color: #ffffff;
 }
@@ -277,6 +289,18 @@ body {
     letter-spacing: 0.01em;
 }
 
+#selected-style-label.booking-full-day {
+    color: #134686;
+}
+
+#selected-style-label.booking-normal {
+    color: #ed3f27;
+}
+
+#selected-style-label.booking-immediate {
+    color: #feb21a;
+}
+
 #change-booking-style {
     background-color: #ed3f27;
     color: #fff;
@@ -288,6 +312,7 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease;
     text-decoration: none;
+    display: inline-block;
 }
 
 #change-booking-style:hover {

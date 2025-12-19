@@ -64,7 +64,10 @@
             confirmBtn.addEventListener('click', () => {
                 if (!selectedStyle) return;
 
-                if (selectedLabel) selectedLabel.textContent = styleLabels[selectedStyle] || selectedStyle;
+                if (selectedLabel) {
+                    selectedLabel.textContent = styleLabels[selectedStyle] || selectedStyle;
+                    selectedLabel.className = 'booking-' + selectedStyle;
+                }
                 if (details) {
                     details.classList.remove('d-none');
                     details.scrollIntoView({ behavior: 'smooth', block: 'start' });
