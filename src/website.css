@@ -280,10 +280,15 @@ body {
 /* END OF BOOKING HEAD IMAGE */
 
 
-/* selected booking style and nomral booking */
+/* selected booking style and normal booking */
+.selected-booking {
+    text-align: center;
+    font-size: 1.89rem; 
+    margin-bottom: 1.25rem;
+}
 
 #selected-style-label {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 800;
     color: #ed3f27;
     letter-spacing: 0.01em;
@@ -309,6 +314,7 @@ body {
     font-size: 1.1rem;
     font-weight: 600;
     border-radius: 8px;
+    transform: translateY(-20px);
     cursor: pointer;
     transition: background-color 0.3s ease;
     text-decoration: none;
@@ -319,7 +325,7 @@ body {
     background-color: #feb21a;
 }
 
- /* END OF SELECTED BOOKING STYLE AND NORMAL BOOKING */
+/* END OF SELECTED BOOKING STYLE AND NORMAL BOOKING */
 
 /* booking details form */
 .booking-details {

@@ -38,9 +38,9 @@
             if (!options.length || !confirmBtn) return;
 
             const styleLabels = {
-                'full-day': 'Full-day booking',
-                'normal': 'Normal booking',
-                'immediate': 'Immediate booking'
+                'full-day': 'Full-day Booking',
+                'normal': 'Normal Booking',
+                'immediate': 'Immediate Booking'
             };
 
             let selectedStyle = null;

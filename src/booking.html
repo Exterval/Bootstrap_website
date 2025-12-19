@@ -53,7 +53,7 @@
                 <h2 class="booking-heading-text">Booking <span class="text-danger">Details</span></h2>
             </div>
             <div class="d-flex flex-column align-items-center mb-4 gap-2">
-                <p class="selected-booking mb-2" style="text-align:center;">Selected booking style: <strong id="selected-style-label"></strong></p>
+                <p class="selected-booking mb-5" style="text-align:center;" >Selected booking style: <strong id="selected-style-label"></strong></p>
                 <button id="change-booking-style" type="button" class="btn btn-link fw-semibold">Change booking style</button>
             </div>
 
@@ -70,10 +70,10 @@
                             <input id="lastName" name="lastName" type="text" class="form-control" placeholder="Doe" required>
                         </div>
 
-                        <div class="col-12">
-                            <label for="contactNumber" class="form-label fw-semibold text-center w-100">Contact Number <span class="text-danger">*</span></label>
-                            <div class="d-flex justify-content-center">
-                                <div class="input-group booking-contact">
+                        <div class="col-12 d-flex justify-content-center">
+                            <div class="col-12 col-md-6">
+                                <label for="contactNumber" class="form-label fw-semibold">Contact Number <span class="text-danger">*</span></label>
+                                <div class="input-group">
                                     <span class="input-group-text">+63</span>
                                     <input id="contactNumber" name="contactNumber" type="tel" class="form-control" placeholder="9XXXXXXXXX" inputmode="tel" autocomplete="tel" required>
                                 </div>
@@ -92,9 +92,11 @@
                             <input id="deliveryAddress" name="deliveryAddress" type="text" class="form-control" placeholder="e.g., 789 Destination Rd, Bulacan" required>
                         </div>
 
-                        <div class="col-12 col-md-6">
-                            <label for="pickupDateTime" class="form-label fw-semibold">Time of Pickup <span class="text-danger">*</span></label>
-                            <input id="pickupDateTime" name="pickupDateTime" type="datetime-local" class="form-control" required>
+                        <div class="col-12 d-flex justify-content-center">
+                            <div class="col-12 col-md-6">
+                                <label for="pickupDateTime" class="form-label fw-semibold">Time of Pickup <span class="text-danger">*</span></label>
+                                <input id="pickupDateTime" name="pickupDateTime" type="datetime-local" class="form-control" required>
+                            </div>
                         </div>
                     </div>
 
@@ -156,7 +158,7 @@
                             <div class="col-12 col-md-4">
                                 <button type="button" class="booking-style-option" data-booking-style="full-day" aria-pressed="false">
                                     <div class="booking-style-icon" aria-hidden="true"><i class="bi bi-calendar2-week"></i></div>
-                                    <div class="booking-style-title">Full-day booking</div>
+                                    <div class="booking-style-title">Full-day Booking</div>
                                     <div class="booking-style-desc">This is a reservation of the truck and driver for an entire workday, giving you exclusive control for multiple stops, complex logistics, or extended loading/unloading times. It offers the most flexibility and control for high-volume or varied tasks.</div>
                                 </button>
                             </div>
@@ -164,7 +166,7 @@
                             <div class="col-12 col-md-4">
                                 <button type="button" class="booking-style-option" data-booking-style="normal" aria-pressed="false">
                                     <div class="booking-style-icon" aria-hidden="true"><i class="bi bi-calendar2-check"></i></div>
-                                    <div class="booking-style-title">Normal booking</div>
+                                    <div class="booking-style-title">Normal Booking</div>
                                     <div class="booking-style-desc">This is a planned, point-to-point delivery set for a specific date and time slot in advance. It is ideal for routine, straightforward shipments where the priority is reliability and cost-effectiveness over immediate speed.</div>
                                 </button>
                             </div>
@@ -172,7 +174,7 @@
                             <div class="col-12 col-md-4">
                                 <button type="button" class="booking-style-option" data-booking-style="immediate" aria-pressed="false">
                                     <div class="booking-style-icon" aria-hidden="true"><i class="bi bi-lightning-charge"></i></div>
-                                    <div class="booking-style-title">Immediate booking</div>
+                                    <div class="booking-style-title">Immediate Booking</div>
                                     <div class="booking-style-desc">This is an urgent request for a truck to be dispatched right away, aiming for pickup within minutes or the same day. It is the fastest, least-planned, and generally the most expensive option, used for time-critical emergencies or last-minute needs.</div>
                                 </button>
                             </div>
