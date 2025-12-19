@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="website.css">
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Tracking</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md" style="background-color: #134686; padding: 5px;">
+        <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <i class="bi bi-truck navbar-brand text-white">PQRS</i>
+                </a>
+                <button class="navbar-toggler" type="button" 
+                data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                <li class="nav-item p-2">
+                    <a href="index.html" class="nav-link" style="color: white;">Home</a>
+                </li>
+                <li class="nav-item p-2">
+                    <a href="index.html#about" class="nav-link" style="color: white;">About</a>
+                </li>
+                <li class="nav-item p-2">
+                    <a href="index.html#services" class="nav-link" style="color: white;">Services</a>
+                </li>
+                <li class="nav-item p-2">
+                    <a href="tracking.html" class="nav-link" style="color: white;">Track</a>
+                </li>
+                <li class="nav-item p-2">
+                    <a href="booking.html" class="nav-link" style="color: white;">Book</a>
+                </li>
+            </ul>
+            </div>
+                    <i class="bi bi-person-fill text-white" style="font-size: 30px;"></i>
+        </div>
+    </nav>
+    <div style="background-color: #ed3f27; height: 7px; box-shadow: 5px 5px 5px;"></div>
+    <div style="background-color: #FEB21A; height: 7px;"></div>
+
+    <div class="container-fluid shadow-sm" style="background-color: #134686;">
+        <h1 class="text-white p-3 text-center">Truck Location Tracking</h1>
+    </div>
+
+    <div class="container mb-5">
+        <div class="row mt-5">
+            <div class="col-8">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7721.652400248064!2d120.99133760177567!3d14.608974531957678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1766176753609!5m2!1sen!2sph" 
+                width="650" height="450" style="border:0;" allowfullscreen="" 
+                loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded-5"></iframe>
+            </div>
+            <div class="col-4">
+                <div class="shadow-sm rounded-3 p-3" style="background-color: #FFFFFF;">
+                    <div class="row">
+                        <h3>Truck Information</h3>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col">
+                            <div style="height: 1px; background-color: #000000;" ></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p>Truck License Plate: DRW 1234</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p>Truck Driver: Trevor James Garcia</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p>Current Status: <span style="color:#559100; text-decoration: underline;">On the Way!</span></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p>Estimated Arrival: <span style="text-decoration: underline;">3:00 AM</span></p>
+                        </div>
+                    </div>
+                    <div class="row text-center p-3">
+                        <button class="btn btn-danger text-white">Refresh</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer mt-auto py-3 mt-5" style="background-color: #134686;">
+                <div class="container d-flex align-items-center justify-content-center">
+                    <span class="text-white text-center">© 2025 PQRS Trucking Services • All Rights Reserved</span>
+                </div>
+        </footer>
+</body>
+</html>
