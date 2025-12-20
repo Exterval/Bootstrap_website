@@ -1,3 +1,4 @@
+//type writer effect
 (() => {
 	const target = document.getElementById('hero-typing-text');
 	if (!target) return;
@@ -46,7 +47,6 @@
 		window.setTimeout(tick, deletingDelayMs);
 	}
 
-	// Start with empty text for the "typing" feel
 	target.textContent = '';
 	tick();
 })();

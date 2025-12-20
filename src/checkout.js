@@ -1,5 +1,5 @@
 (function() {
-    // Retrieve booking data from localStorage
+    // retrieve booking data from localStorage
     const bookingDataString = localStorage.getItem('bookingData');
     
     if (!bookingDataString) {
@@ -9,13 +9,11 @@
     
     try {
         const bookingData = JSON.parse(bookingDataString);
-        
-        // Populate booking style
+
         const bookingStyleElement = document.getElementById('checkout-booking-style');
         if (bookingStyleElement && bookingData.bookingStyleLabel) {
             bookingStyleElement.textContent = bookingData.bookingStyleLabel;
             
-            // Apply color based on booking style
             if (bookingData.bookingStyle === 'full-day') {
                 bookingStyleElement.className = 'text-primary';
             } else if (bookingData.bookingStyle === 'normal') {
@@ -25,7 +23,6 @@
             }
         }
         
-        // Populate customer information
         const fullNameElement = document.getElementById('checkout-fullname');
         if (fullNameElement && bookingData.firstName && bookingData.lastName) {
             fullNameElement.textContent = `${bookingData.firstName} ${bookingData.lastName}`;
@@ -36,7 +33,6 @@
             contactElement.textContent = `+63${bookingData.contactNumber}`;
         }
         
-        // Populate pickup and delivery information
         const pickupElement = document.getElementById('checkout-pickup');
         if (pickupElement && bookingData.pickupAddress) {
             pickupElement.textContent = bookingData.pickupAddress;
@@ -49,7 +45,6 @@
         
         const timeElement = document.getElementById('checkout-time');
         if (timeElement && bookingData.pickupDateTime) {
-            // Format the datetime-local value to a more readable format
             const dateTime = new Date(bookingData.pickupDateTime);
             const options = { 
                 month: 'short', 
@@ -61,11 +56,10 @@
             };
             timeElement.textContent = dateTime.toLocaleString('en-US', options);
         }
-        
-        // Populate items
+
         const itemsContainer = document.getElementById('checkout-items-container');
         if (itemsContainer && bookingData.items && bookingData.items.length > 0) {
-            itemsContainer.innerHTML = ''; // Clear existing content
+            itemsContainer.innerHTML = '';
             
             bookingData.items.forEach(item => {
                 const itemRow = document.createElement('div');
