@@ -1,6 +1,4 @@
-// Booking System Manager
 const BookingSystem = {
-    // DOM Elements
     elements: {
         bookingForm: null,
         itemRows: null,
@@ -16,7 +14,6 @@ const BookingSystem = {
         options: []
     },
 
-    // Constants
     BODY_OPEN_CLASS: 'pqrs-booking-style-open',
     FALLBACK_BACKDROP_CLASS: 'pqrs-booking-style-fallback-backdrop',
     
@@ -26,10 +23,9 @@ const BookingSystem = {
         'immediate': 'Immediate Booking'
     },
 
-    // State
     selectedStyle: null,
 
-    // Initialize the booking system
+    // initialize the booking system
     init: function() {
         this.cacheDOMElements();
         
@@ -45,7 +41,6 @@ const BookingSystem = {
         this.showBookingStyleModal();
     },
 
-    // Cache all DOM elements
     cacheDOMElements: function() {
         this.elements.bookingForm = document.getElementById('booking-form');
         this.elements.itemRows = document.getElementById('item-rows');
@@ -67,7 +62,6 @@ const BookingSystem = {
         }
     },
 
-    // Modal management functions
     setBodyOpen: function(isOpen) {
         document.body.classList.toggle(this.BODY_OPEN_CLASS, isOpen);
     },
@@ -85,7 +79,6 @@ const BookingSystem = {
         if (backdrop) backdrop.remove();
     },
 
-    // Booking style selection
     setSelectedStyle: function(style) {
         this.selectedStyle = style;
         
@@ -144,7 +137,7 @@ const BookingSystem = {
         }
     },
 
-    // Item management
+    // item management
     getItemRowCount: function() {
         if (!this.elements.itemRows) return 0;
         return this.elements.itemRows.querySelectorAll('[data-item-row]').length;
@@ -227,7 +220,6 @@ const BookingSystem = {
         this.updateConfirmButton();
     },
 
-    // Form validation
     validateForm: function() {
         if (!this.elements.bookingForm) return false;
         
@@ -254,7 +246,6 @@ const BookingSystem = {
         this.elements.confirmBookingBtn.disabled = !isValid;
     },
 
-    // Collect all form data
     collectFormData: function() {
         const bookingData = {
             bookingStyle: this.selectedStyle,
@@ -291,7 +282,7 @@ const BookingSystem = {
         return bookingData;
     },
 
-    // Save booking data to localStorage
+    // save booking data
     saveBookingData: function(bookingData) {
         try {
             localStorage.setItem('bookingData', JSON.stringify(bookingData));
@@ -302,7 +293,6 @@ const BookingSystem = {
         }
     },
 
-    // Handle confirm booking button click
     handleConfirmBooking: function() {
         if (!this.elements.bookingForm) return;
 
@@ -319,7 +309,7 @@ const BookingSystem = {
         }
     },
 
-    // Initialize booking style modal
+    // booking style modal
     initializeBookingStyleModal: function() {
         if (this.elements.bookingStyleModalEl && window.bootstrap) {
             this.elements.bookingStyleModalEl.addEventListener('show.bs.modal', () => this.setBodyOpen(true));
@@ -327,7 +317,6 @@ const BookingSystem = {
         }
     },
 
-    // Initialize item management
     initializeItemManagement: function() {
         if (this.elements.itemRows) {
             this.elements.itemRows.addEventListener('click', (e) => {
@@ -339,7 +328,6 @@ const BookingSystem = {
         }
     },
 
-    // Initialize form validation
     initializeFormValidation: function() {
         if (this.elements.bookingForm) {
             this.elements.bookingForm.addEventListener('input', () => this.updateConfirmButton());
@@ -354,23 +342,19 @@ const BookingSystem = {
         }
     },
 
-    // Attach all event listeners
     attachEventListeners: function() {
-        // Booking style selection
         this.elements.options.forEach(option => {
             option.addEventListener('click', () => {
                 this.setSelectedStyle(option.dataset.bookingStyle);
             });
         });
 
-        // Confirm booking style button
         if (this.elements.confirmBtn) {
             this.elements.confirmBtn.addEventListener('click', () => {
                 this.confirmBookingStyle();
             });
         }
 
-        // Change booking style button
         if (this.elements.changeStyleBtn) {
             this.elements.changeStyleBtn.addEventListener('click', () => {
                 if (this.elements.bookingStyleModal) {
@@ -385,7 +369,6 @@ const BookingSystem = {
             });
         }
 
-        // Add item button
         if (this.elements.addItemBtn) {
             this.elements.addItemBtn.addEventListener('click', () => {
                 this.createItemRow();
@@ -393,7 +376,6 @@ const BookingSystem = {
             });
         }
 
-        // Confirm booking button
         if (this.elements.confirmBookingBtn) {
             this.elements.confirmBookingBtn.addEventListener('click', () => {
                 this.handleConfirmBooking();
@@ -402,7 +384,7 @@ const BookingSystem = {
     }
 };
 
-// Initialize booking system when DOM is ready
+// initialize booking system when DOM is ready
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => BookingSystem.init());
 } else {
