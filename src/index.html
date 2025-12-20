@@ -10,36 +10,38 @@
     <title>Website</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-md" style="background-color: #134686; padding: 5px;">
+    <nav class="navbar navbar-expand-md" style="background-color: #134686; padding: 10px 0;">
         <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <i class="bi navbar-brand text-white">PQRS</i>
+                <a class="navbar-brand pqrs-brand-hover" href="index.html" style="font-size: 24px; font-weight: bold;">
+                    <span class="text-white">PQRS</span>
                 </a>
-                <button class="navbar-toggler" type="button" 
+                <button class="navbar-toggler bg-light" type="button" 
                 data-bs-toggle="collapse" data-bs-target="#navbarNav" 
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                <li class="nav-item p-2">
-                    <a href="index.html" class="nav-link" style="color: white;">Home</a>
+                <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link nav-link-hover px-3 py-2">Home</a>
                 </li>
-                <li class="nav-item p-2">
-                    <a href="#about" class="nav-link" style="color: white;">About</a>
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link nav-link-hover px-3 py-2">About</a>
                 </li>
-                <li class="nav-item p-2">
-                    <a href="#services" class="nav-link" style="color: white;">Services</a>
+                <li class="nav-item">
+                    <a href="index.html#services" class="nav-link nav-link-hover px-3 py-2">Services</a>
                 </li>
-                <li class="nav-item p-2">
-                    <a href="tracking.html" class="nav-link" style="color: white;">Track</a>
+                <li class="nav-item">
+                    <a href="tracking.html" class="nav-link nav-link-hover px-3 py-2">Track</a>
                 </li>
-                <li class="nav-item p-2">
-                    <a href="booking.html" class="nav-link" style="color: white;">Book</a>
+                <li class="nav-item">
+                    <a href="booking.html" class="nav-link nav-link-hover px-3 py-2">Book</a>
                 </li>
             </ul>
             </div>
-                    <a href="login.html" class="nav-link"><i class="bi bi-person-fill text-white" style="font-size: 30px;"></i></a>
+                    <a href="login.html" class="text-decoration-none">
+                        <i class="bi bi-person-fill text-white" style="font-size: 30px; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.7'" onmouseout="this.style.opacity='1'"></i>
+                    </a>
         </div>
     </nav>
     <div style="background-color: #ed3f27; height: 7px; box-shadow: 5px 5px 5px;"></div>

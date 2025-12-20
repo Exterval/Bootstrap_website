@@ -381,3 +381,44 @@ body {
     text-align: center;
 }
 /* END OF BOOKING DETAILS FORM */
+
+/* navigation bar animations */
+.nav-link-hover {
+    color: white !important;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link-hover:hover {
+    color: #FEB21A !important;
+    transform: translateY(-2px);
+}
+
+.nav-link-hover::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #FEB21A;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link-hover:hover::after {
+    width: 80%;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(254, 178, 26, 0.5);
+}
+
+.pqrs-brand-hover {
+    transition: all 0.3s ease;
+}
+
+.pqrs-brand-hover:hover span {
+    color: #ed3f27 !important;
+}
+/* END OF NAVIGATION BAR ANIMATIONS */
