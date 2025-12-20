@@ -25,10 +25,16 @@ FDF4E3
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: -15px;
 }
 
 body{
     background-color: var(--bg-color);
+}
+
+#about,
+#services {
+    scroll-margin-top: -10px;
 }
 
 
