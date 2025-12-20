@@ -56,9 +56,10 @@
 
 <div class="container">
     <h1 class="text-center fw-bold mt-3">Booking <span style="color: #ED3F27;">Summary</span></h1>
-    <div class="row justify-content-around mt-5 mb-5">
-        <div class="col-6">
-            <div class="border shadow-sm rounded-3 p-5" style="background-color: #FFFFFF;">
+    <p class="text-center fs-5 mb-3">Booking Style: <strong id="checkout-booking-style" class="text-primary">Normal Booking</strong></p>
+    <div class="row justify-content-center g-4 mt-3 mb-5">
+        <div class="col-12 col-lg-7">
+            <div class="border shadow-sm rounded-3 p-3 p-md-4 p-lg-5" style="background-color: #FFFFFF;">
                 <div class="row">
                     <div class="col fs-4">
                         <i class="bi bi-person"></i>
@@ -71,19 +72,19 @@
                     </div>
                 </div>
                 <div class="row mt-3">
-                    <div class="col">
+                    <div class="col-12 col-md-6">
                         <span class="fw-bold">Full Name</span>
                     </div>
-                    <div class="col">
+                    <div class="col-12 col-md-6">
                         <span class="fw-bold">Contact Number</span>
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <div class="col">
-                        <span>John Pork</span>
+                    <div class="col-12 col-md-6">
+                        <span id="checkout-fullname">John Pork</span>
                     </div>
-                    <div class="col">
-                        <span>09XXXXXXX</span>
+                    <div class="col-12 col-md-6">
+                        <span id="checkout-contact">09XXXXXXX</span>
                     </div>
                 </div>
                 <div class="row">
@@ -98,25 +99,25 @@
                     </div>
                 </div>
                 <div class="row mt-3">
-                    <div class="col">
+                    <div class="col-12 col-md-4">
                         <span class="fw-bold">Pickup Address</span>
                     </div>
-                    <div class="col">
+                    <div class="col-12 col-md-4">
                         <span class="fw-bold">Delivery Address</span>
                     </div>
-                    <div class="col">
+                    <div class="col-12 col-md-4">
                         <span class="fw-bold">Pickup Time</span>
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <div class="col">
-                        <span>Makati City</span>
+                    <div class="col-12 col-md-4">
+                        <span id="checkout-pickup">Makati City</span>
                     </div>
-                    <div class="col">
-                        <span>Taguig City</span>
+                    <div class="col-12 col-md-4">
+                        <span id="checkout-delivery">Taguig City</span>
                     </div>
-                    <div class="col">
-                        <span>10:30am</span>
+                    <div class="col-12 col-md-4">
+                        <span id="checkout-time">10:30am</span>
                     </div>
                 </div>
                 <div class="row">
@@ -130,38 +131,29 @@
                         <div style="height: 1px; background-color: #000000;" ></div>
                     </div>
                 </div>
-                <div class="row mt-3 border-bottom border-black" style="background-color: #D9D9D9;">
-                    <div class="col text-center p-2">
-                        <span class="fw-bold">Item Name</span>
+                <div class="table-responsive">
+                    <div class="row mt-3 border-bottom border-black" style="background-color: #D9D9D9;">
+                        <div class="col text-center p-2">
+                            <span class="fw-bold">Item Name</span>
+                        </div>
+                        <div class="col text-center p-2">
+                            <span class="fw-bold">Type</span>
+                        </div> 
+                        <div class="col text-center p-2">
+                            <span class="fw-bold">Quantity</span>
+                        </div>
+                        <div class="col text-center p-2">
+                            <span class="fw-bold">Weight</span>
+                        </div>
                     </div>
-                    <div class="col text-center p-2">
-                        <span class="fw-bold">Type</span>
-                    </div> 
-                    <div class="col text-center p-2">
-                        <span class="fw-bold">Quantity</span>
-                    </div>
-                    <div class="col text-center p-2">
-                        <span class="fw-bold">Weight</span>
-                    </div>
-                </div>
-                <div class="row border-bottom border-black">
-                    <div class="col text-center p-2">
-                        <span>Table</span>
-                    </div>
-                    <div class="col text-center p-2">
-                        <span>Furniture</span>
-                    </div>
-                    <div class="col text-center p-2">
-                        <span>1</span>
-                    </div>
-                    <div class="col text-center p-2">
-                        <span>20kg</span>
+                    <div id="checkout-items-container">
+                        <!-- Items will be populated dynamically -->
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-4 justify-content-center align-content-center">
-            <div class="border-start border-5 border-danger shadow-sm rounded-3 p-5" style="background-color: #FFFFFF;">
+        <div class="col-12 col-lg-4">
+            <div class="border-start border-5 border-danger shadow-sm rounded-3 p-3 p-md-4 p-lg-5" style="background-color: #FFFFFF;">
                 <div class="row">
                     <div class="col">
                         <h3>Order Summary</h3>
@@ -216,7 +208,7 @@
                 </div>
                 <div class="row">
                     <div class="col text-center">
-                        <a href="#" class="link-dark">Edit information</a>
+                        <a href="booking.html" class="link-dark">Edit information</a>
                     </div>
                 </div>
             </div>
@@ -230,7 +222,7 @@
         </footer>
 
     <div id="successModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 9999; justify-content: center; align-items: center;">
-        <div style="background-color: white; padding: 40px; border-radius: 10px; text-align: center; max-width: 400px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+        <div style="background-color: white; padding: 30px; border-radius: 10px; text-align: center; max-width: 400px; width: 90%; margin: 0 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
             <i class="bi bi-check-circle-fill" style="font-size: 80px; color: #28a745; margin-bottom: 10px;"></i>
             <h2 class="mt-3 mb-3" style="color: #134686;">Payment Successful!</h2>
             <p class="mb-4">Thank you for using our trucking service, your booking has been confirmed!</p>
@@ -243,5 +235,6 @@
             document.getElementById('successModal').style.display = 'flex';
         }
     </script>
+    <script src="checkout.js"></script>
 </body>
 </html>

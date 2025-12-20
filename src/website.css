@@ -42,7 +42,7 @@ body {
     background-image: linear-gradient(rgba(19, 70, 134, 0.5), rgba(19, 70, 134, 0.5)), url('/assets/LandingPage2.png');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center, center -330px;
+    background-position: center center;
     background-attachment: fixed;
     max-width: 100%;
     min-height: 100vh;
@@ -120,6 +120,33 @@ body {
 
 .btn-book-now:hover {
     background-color: #feb21a;
+}
+
+.confirm-button {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.btn-confirm {
+    background-color: #ed3f27;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-confirm:hover:not(:disabled) {
+    background-color: #feb21a;
+}
+
+.btn-confirm:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+    opacity: 0.6;
 }
 
 #hero-section-two{
@@ -380,6 +407,77 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.741);
     text-align: center;
 }
+
+/* section container for customer info and pickup/delivery */
+.section-container {
+    padding: 1.5rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    background-color: #fafafa;
+}
+
+/* item row container */
+.item-row-container {
+    position: relative;
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    background-color: #fafafa;
+}
+
+/* remove item button */
+.remove-item-btn {
+    margin-top: 1rem;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.remove-item-btn:hover {
+    background-color: #c82333;
+    transform: translateY(-1px);
+}
+
+.remove-item-btn:active {
+    transform: translateY(0);
+}
+
+.remove-item-btn i {
+    font-size: 1rem;
+}
+
+/* add item button */
+.booking-add-item {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.booking-add-item:hover {
+    background-color: #218838;
+    transform: translateY(-1px);
+}
+
+.booking-add-item:active {
+    transform: translateY(0);
+}
 /* END OF BOOKING DETAILS FORM */
 
 /* navigation bar animations */
@@ -422,3 +520,62 @@ body {
     color: #ed3f27 !important;
 }
 /* END OF NAVIGATION BAR ANIMATIONS */
+
+/* checkout  */
+.checkout-section-title {
+    font-size: 1.5rem;
+}
+
+/* Mobile responsive for checkout */
+@media (max-width: 768px) {
+    .checkout-section-title {
+        font-size: 1.2rem;
+    }
+    
+    /* Stack items vertically on mobile */
+    #checkout-items-container .row .col {
+        min-width: 80px;
+        font-size: 0.9rem;
+    }
+    
+    /* Adjust heading size on mobile */
+    h1 {
+        font-size: 1.75rem !important;
+    }
+    
+    /* Make table headers smaller on mobile */
+    .table-responsive .row {
+        font-size: 0.85rem;
+    }
+    
+    /* Adjust padding for mobile */
+    .border.shadow-sm.rounded-3 {
+        padding: 1rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Further adjustments for small mobile */
+    h1 {
+        font-size: 1.5rem !important;
+    }
+    
+    .fs-5 {
+        font-size: 1rem !important;
+    }
+    
+    .fs-4 {
+        font-size: 1.1rem !important;
+    }
+    
+    /* Make success modal text smaller */
+    #successModal h2 {
+        font-size: 1.5rem !important;
+    }
+    
+    #successModal .bi-check-circle-fill {
+        font-size: 60px !important;
+    }
+}
+/* END OF CHECKOUT PAGE RESPONSIVE STYLES */
+
